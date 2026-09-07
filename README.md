@@ -82,7 +82,7 @@ For ROS bag extraction:
 python -m pip install -e '.[dev,ros]'
 ```
 
-PP-LiteSeg training and inference use the separate CUDA/SuperGradients environment described in [`requirements-autodl.txt`](requirements-autodl.txt). Model weights and datasets are intentionally excluded from Git.
+PP-LiteSeg training and inference use the separate CUDA/SuperGradients environment described in [`requirements-autodl.txt`](requirements-autodl.txt). Large model files and datasets are excluded from Git; the SiteMind fine-tuned checkpoints are distributed through GitHub Releases.
 
 ## Repository layout
 
@@ -100,14 +100,29 @@ tests/                    Unit and regression tests
 
 ## Data and weights
 
-This repository does not redistribute datasets, raw ROS bags or neural-network weights.
+Datasets and raw ROS bags are not redistributed. Two SiteMind fine-tuned PP-LiteSeg checkpoints are available from the [`v0.1.0` release](https://github.com/Minyue0213/Sitemind/releases/tag/v0.1.0):
+
+| Checkpoint | Selection criterion | Recommended use | SHA-256 |
+|---|---|---|---|
+| [`best_safety.pth`](https://github.com/Minyue0213/Sitemind/releases/download/v0.1.0/best_safety.pth) | Best validation safety score, epoch 11 | Default for conservative risk mapping and planning | `dbd5c83af8120136051f120ed7c114885b6c346ecdbe69ce2b05e83ea2f51430` |
+| [`best_miou.pth`](https://github.com/Minyue0213/Sitemind/releases/download/v0.1.0/best_miou.pth) | Best validation mIoU, epoch 13 | Semantic-segmentation comparison | `7cbee2d7019170ea549a0b78072f8cb9ab97c6732af007e2e90e150a050d2b2c` |
+
+Download the recommended checkpoint:
+
+```bash
+mkdir -p models
+curl -L https://github.com/Minyue0213/Sitemind/releases/download/v0.1.0/best_safety.pth \
+  -o models/best_safety.pth
+```
+
+These are full training checkpoints and include the model, optimizer, scheduler and mixed-precision states. They use the 64-class GOOSE ontology and a `512 × 512` input resolution. See the [reproduction guide](docs/REPRODUCIBILITY.md) for inference and evaluation commands.
 
 - [GOOSE / GOOSE-Ex homepage](https://goose-dataset.de/)
 - [Dataset setup and downloads](https://goose-dataset.de/docs/setup/)
 - [ALICE excavator platform](https://goose-dataset.de/docs/alice/)
 - [GOOSE-Ex paper](https://goose-dataset.de/images/gooseEx.pdf)
 
-GOOSE data is published under **CC BY-SA 4.0**. Follow its official terms and citation guidance. The MIT license in this repository applies only to the SiteMind source code and original documentation, not to third-party data, weights or assets.
+GOOSE data is published under **CC BY-SA 4.0**. Follow its official terms and citation guidance. The released fine-tuned checkpoints are provided under **CC BY-SA 4.0** with attribution to GOOSE / GOOSE-Ex and PP-LiteSeg. The MIT license in this repository applies only to the SiteMind source code and original documentation, not to third-party data or assets.
 
 ## Important limitations
 
