@@ -1,0 +1,16 @@
+# Use inside an AutoDL image that already provides:
+# Python 3.9 + PyTorch 1.13.1 + CUDA 11.7 (or the closest compatible image).
+# Do not install this file into the local Apple Silicon .venv.
+numpy>=1.22.4,<=1.23
+# Newer mirror entries currently publish inconsistent package metadata.
+onnxsim==0.4.36
+albumentations==1.3.1
+opencv-python==4.8.1.78
+opencv-python-headless==4.8.1.78
+tensorboard==2.20.0
+svglib==1.5.1
+super-gradients==3.7.1
+matplotlib
+pillow
+pyyaml
+torchmetrics

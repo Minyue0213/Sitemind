@@ -1,0 +1,30 @@
+.venv/
+.uv-cache/
+__pycache__/
+.pycache/
+*.py[cod]
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+
+# Large datasets and generated results. Keep the leading slash: ``data/``
+# would also hide the real Python package at ``src/sitemind/data``.
+/data/
+artifacts/
+outputs/
+models/
+
+# Local planning/submission material; not part of the public source release
+AGENT.md
+FEASIBILITY_REPORT.md
+SiteMind_Project_Context.md
+TNS_IMPLEMENTATION_NOTES.md
+*.docx
+tmp/
+
+# macOS / IDE
+.DS_Store
+.idea/
+.vscode/

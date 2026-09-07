@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sitemind"
+version = "0.1.0"
+description = "Semantic-geometric risk mapping and planning for construction machinery"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9,<3.13"
+keywords = [
+  "construction-machinery",
+  "camera-lidar-fusion",
+  "bev",
+  "risk-aware-planning",
+  "off-road-robotics",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24,<2.0",
+  "pillow>=10,<12",
+  "pyyaml>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+]
+ros = [
+  "rosbags==0.9.23",
+]
+
+[project.urls]
+Homepage = "https://github.com/Minyue0213/Sitemind"
+Repository = "https://github.com/Minyue0213/Sitemind.git"
+Issues = "https://github.com/Minyue0213/Sitemind/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sitemind"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,10 @@
+resolution_m: 0.2
+min_points_per_cell: 3
+slope_radius_cells: 1
+step_radius_cells: 3
+safe_slope_deg: 10.0
+critical_slope_deg: 35.0
+safe_step_m: 0.10
+critical_step_m: 0.35
+slope_weight: 0.5
+step_weight: 0.5

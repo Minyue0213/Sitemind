@@ -1,0 +1,82 @@
+# Provisional engineering mapping. IDs are intentionally not hard-coded: the
+# official goose_label_mapping.csv is the source of truth for name-to-ID lookup.
+risk_groups:
+  - name: low
+    risk: 0.05
+    classes:
+      - asphalt
+      - bikeway
+      - pedestrian_crossing
+      - road_marking
+      - sidewalk
+
+  - name: medium
+    risk: 0.40
+    classes:
+      - cobble
+      - gravel
+      - soil
+      - low_grass
+      - crops
+      - moss
+      - leaves
+
+  - name: high
+    risk: 0.75
+    classes:
+      - high_grass
+      - bush
+      - forest
+      - hedge
+      - scenery_vegetation
+      - snow
+      - debris
+
+  - name: forbidden_or_obstacle
+    risk: 1.0
+    classes:
+      - animal
+      - person
+      - rider
+      - bicycle
+      - bus
+      - car
+      - caravan
+      - heavy_machinery
+      - kick_scooter
+      - military_vehicle
+      - motorcycle
+      - on_rails
+      - trailer
+      - truck
+      - bridge
+      - building
+      - container
+      - fence
+      - guard_rail
+      - tunnel
+      - wall
+      - wire
+      - barrel
+      - obstacle
+      - pipe
+      - pole
+      - rock
+      - street_light
+      - barrier_tape
+      - boom_barrier
+      - misc_sign
+      - road_block
+      - traffic_cone
+      - traffic_light
+      - traffic_sign
+      - curb
+      - rail_track
+      - tree_crown
+      - tree_root
+      - tree_trunk
+      - water
+      - ego_vehicle
+      - outlier
+      - sky
+      - undefined
