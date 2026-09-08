@@ -1,0 +1,76 @@
+device=cuda train=3989 val=407 size=512x512 batch=8 amp=True
+epoch=1/15 batch=100/498 loss=1.3043
+epoch=1/15 batch=200/498 loss=1.1926
+epoch=1/15 batch=300/498 loss=1.1120
+epoch=1/15 batch=400/498 loss=1.0619
+epoch=1 train_loss=1.0359 val_loss=0.8455 mIoU=0.2429 hazard_recall=0.8567 false_safe=0.2131
+epoch=2/15 batch=100/498 loss=0.8845
+epoch=2/15 batch=200/498 loss=0.8714
+epoch=2/15 batch=300/498 loss=0.8656
+epoch=2/15 batch=400/498 loss=0.8570
+epoch=2 train_loss=0.8515 val_loss=0.7832 mIoU=0.2758 hazard_recall=0.8987 false_safe=0.1482
+epoch=3/15 batch=100/498 loss=0.8108
+epoch=3/15 batch=200/498 loss=0.8047
+epoch=3/15 batch=300/498 loss=0.8051
+epoch=3/15 batch=400/498 loss=0.8022
+epoch=3 train_loss=0.8063 val_loss=0.7868 mIoU=0.2902 hazard_recall=0.9277 false_safe=0.1182
+epoch=4/15 batch=100/498 loss=0.7822
+epoch=4/15 batch=200/498 loss=0.7771
+epoch=4/15 batch=300/498 loss=0.7764
+epoch=4/15 batch=400/498 loss=0.7763
+epoch=4 train_loss=0.7731 val_loss=0.7768 mIoU=0.2932 hazard_recall=0.9283 false_safe=0.1220
+epoch=5/15 batch=100/498 loss=0.7481
+epoch=5/15 batch=200/498 loss=0.7586
+epoch=5/15 batch=300/498 loss=0.7534
+epoch=5/15 batch=400/498 loss=0.7521
+epoch=5 train_loss=0.7512 val_loss=0.7635 mIoU=0.3081 hazard_recall=0.9493 false_safe=0.0925
+epoch=6/15 batch=100/498 loss=0.7311
+epoch=6/15 batch=200/498 loss=0.7304
+epoch=6/15 batch=300/498 loss=0.7291
+epoch=6/15 batch=400/498 loss=0.7281
+epoch=6 train_loss=0.7295 val_loss=0.7561 mIoU=0.3031 hazard_recall=0.9221 false_safe=0.1314
+epoch=7/15 batch=100/498 loss=0.7075
+epoch=7/15 batch=200/498 loss=0.7061
+epoch=7/15 batch=300/498 loss=0.7063
+epoch=7/15 batch=400/498 loss=0.7065
+epoch=7 train_loss=0.7065 val_loss=0.7467 mIoU=0.3143 hazard_recall=0.9245 false_safe=0.1153
+epoch=8/15 batch=100/498 loss=0.6926
+epoch=8/15 batch=200/498 loss=0.6945
+epoch=8/15 batch=300/498 loss=0.6947
+epoch=8/15 batch=400/498 loss=0.6932
+epoch=8 train_loss=0.6916 val_loss=0.7451 mIoU=0.3112 hazard_recall=0.9243 false_safe=0.1234
+epoch=9/15 batch=100/498 loss=0.6834
+epoch=9/15 batch=200/498 loss=0.6821
+epoch=9/15 batch=300/498 loss=0.6796
+epoch=9/15 batch=400/498 loss=0.6796
+epoch=9 train_loss=0.6788 val_loss=0.7364 mIoU=0.3272 hazard_recall=0.9287 false_safe=0.1076
+epoch=10/15 batch=100/498 loss=0.6666
+epoch=10/15 batch=200/498 loss=0.6664
+epoch=10/15 batch=300/498 loss=0.6643
+epoch=10/15 batch=400/498 loss=0.6659
+epoch=10 train_loss=0.6646 val_loss=0.7381 mIoU=0.3297 hazard_recall=0.9390 false_safe=0.1051
+epoch=11/15 batch=100/498 loss=0.6571
+epoch=11/15 batch=200/498 loss=0.6566
+epoch=11/15 batch=300/498 loss=0.6569
+epoch=11/15 batch=400/498 loss=0.6572
+epoch=11 train_loss=0.6561 val_loss=0.7359 mIoU=0.3332 hazard_recall=0.9379 false_safe=0.1042
+epoch=12/15 batch=100/498 loss=0.6431
+epoch=12/15 batch=200/498 loss=0.6459
+epoch=12/15 batch=300/498 loss=0.6457
+epoch=12/15 batch=400/498 loss=0.6473
+epoch=12 train_loss=0.6467 val_loss=0.7345 mIoU=0.3338 hazard_recall=0.9296 false_safe=0.1160
+epoch=13/15 batch=100/498 loss=0.6431
+epoch=13/15 batch=200/498 loss=0.6431
+epoch=13/15 batch=300/498 loss=0.6419
+epoch=13/15 batch=400/498 loss=0.6420
+epoch=13 train_loss=0.6418 val_loss=0.7315 mIoU=0.3401 hazard_recall=0.9321 false_safe=0.1104
+epoch=14/15 batch=100/498 loss=0.6391
+epoch=14/15 batch=200/498 loss=0.6403
+epoch=14/15 batch=300/498 loss=0.6387
+epoch=14/15 batch=400/498 loss=0.6385
+epoch=14 train_loss=0.6375 val_loss=0.7304 mIoU=0.3328 hazard_recall=0.9329 false_safe=0.1081
+epoch=15/15 batch=100/498 loss=0.6353
+epoch=15/15 batch=200/498 loss=0.6360
+epoch=15/15 batch=300/498 loss=0.6358
+epoch=15/15 batch=400/498 loss=0.6348
+epoch=15 train_loss=0.6351 val_loss=0.7312 mIoU=0.3396 hazard_recall=0.9312 false_safe=0.1119

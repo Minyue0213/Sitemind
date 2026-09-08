@@ -1,6 +1,6 @@
 # Reproducing SiteMind
 
-This guide separates the dependency-light core, GOOSE-Ex perception, calibrated ALICE fusion and sequence planning pipelines. Large datasets, generated artifacts and model checkpoints are not stored in Git.
+This guide separates the dependency-light core, GOOSE-Ex perception, calibrated ALICE fusion and sequence planning pipelines. Large datasets, generated artifacts and model checkpoints are not stored in Git; checkpoints and the preserved experiment bundle are available from GitHub Releases.
 
 ## 1. Core package and tests
 
@@ -129,6 +129,7 @@ Extract consecutive frames and retain their world poses:
 ```bash
 python scripts/extract_alice_sequence.py \
   /path/to/alice_sequence02.bag \
+  --count 231 \
   --reference-frame e2_map \
   --output artifacts/alice_seq02_sequence_full
 ```
@@ -136,10 +137,15 @@ python scripts/extract_alice_sequence.py \
 After PP-LiteSeg predictions have been generated for the extracted images:
 
 ```bash
+python scripts/run_ppliteseg.py \
+  artifacts/alice_seq02_sequence_full \
+  --checkpoint models/best_safety.pth \
+  --output artifacts/alice_seq02_sequence_full_predictions
+
 python scripts/build_sequence_fusion.py \
   artifacts/alice_seq02_sequence_full \
-  /path/to/sequence_predictions \
-  /path/to/goose_label_mapping.csv \
+  artifacts/alice_seq02_sequence_full_predictions \
+  data/processed/gooseEx_2d_val/goose_label_mapping.csv \
   --output artifacts/alice_seq02_sequence_full_fusion
 
 python scripts/build_temporal_sequence.py \
@@ -173,3 +179,7 @@ The selected pixel must have a valid, non-occluded measured ground correspondenc
 - The ALICE Sequence02 raw bag supports genuine calibrated and temporal fusion, but its annotated showcase frames belong to the training split.
 - Sequence02 therefore demonstrates engineering integration; it is not reported as held-out fusion generalization.
 - The route is a risk-grid reference path, not a track-aware command trajectory.
+
+## 8. Restore the preserved experiment outputs
+
+The generated outputs from the documented run are preserved as a versioned Release asset. Follow [`EXPERIMENT_ARCHIVE.md`](EXPERIMENT_ARCHIVE.md) to download, verify and extract it. The exact upstream inputs and their SHA-256 checksums are recorded in [`DATA_MANIFEST.md`](DATA_MANIFEST.md).

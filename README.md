@@ -6,7 +6,7 @@ SiteMind turns camera semantics, LiDAR terrain geometry, calibration, uncertaint
 
 > **Scope:** this repository demonstrates offline replay on real sensor data and map-level local planning. It is not a vehicle controller, a kinematically executable trajectory planner, or a verified autonomous excavator system.
 
-[Reproduction guide](docs/REPRODUCIBILITY.md) · [Demo guide](docs/DEMO_GUIDE.md) · [Script index](scripts/README.md)
+[Reproduction guide](docs/REPRODUCIBILITY.md) · [Data manifest](docs/DATA_MANIFEST.md) · [Experiment archive](docs/EXPERIMENT_ARCHIVE.md) · [Demo guide](docs/DEMO_GUIDE.md) · [Script index](scripts/README.md)
 
 ## What is implemented
 
@@ -116,6 +116,8 @@ curl -L https://github.com/Minyue0213/Sitemind/releases/download/v0.1.0/best_saf
 ```
 
 These are full training checkpoints and include the model, optimizer, scheduler and mixed-precision states. They use the 64-class GOOSE ontology and a `512 × 512` input resolution. See the [reproduction guide](docs/REPRODUCIBILITY.md) for inference and evaluation commands.
+
+The [`v0.1.1` reproducibility release](https://github.com/Minyue0213/Sitemind/releases/tag/v0.1.1) preserves the generated predictions, fusion layers, evaluation reports, sequence metadata and final GIF demonstrations. The small training configuration, metric history and log are also versioned under [`experiments/ppliteseg_gooseex_ce_dice/`](experiments/ppliteseg_gooseex_ce_dice/). See the [experiment archive guide](docs/EXPERIMENT_ARCHIVE.md) for integrity and restoration details.
 
 - [GOOSE / GOOSE-Ex homepage](https://goose-dataset.de/)
 - [Dataset setup and downloads](https://goose-dataset.de/docs/setup/)
